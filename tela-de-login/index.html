@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Uniside</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="content">
+        <div class="card">
+            <h1>Conectando Mentes, Criando Futuros</h1>
+            <img src="assets/imagens/mockup2.png" alt="">
+        </div>
+        <div class="title">
+            <h1>Comece Agora!</h1>
+        </div>
+        <button id="openPopup">Criar Conta</button>
+        <div class="term-text">
+            <p>Ao criar, você concorda com os Termos de Serviço.</p>
+        </div>
+        <div class="login-text">
+            <p>já tem uma conta? <i class="fa-solid fa-arrow-down fa-bounce"></i></p>
+        </div>
+        <div id="popup" class="popup">
+            <button id="closePopup"><i class="fa-solid fa-xmark"></i></button>
+            <form action="processar_cadastro.php" method="POST">
+                <label for="ra">R.A:</label>
+                    <input type="text" id="ra" name="ra" required><br><br>
+                    
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required><br><br>
+                    
+                    <label for="universidade">Universidade:</label>
+                    <select id="universidade" name="universidade" required>
+                        <option value="usp">Universidade de São Paulo (USP)</option>
+                        <option value="unicamp">Universidade Estadual de Campinas (Unicamp)</option>
+                        <option value="unesp">Universidade Estadual Paulista (Unesp)</option>
+                        <option value="pucsp">Pontifícia Universidade Católica de São Paulo (PUC-SP)</option>
+                        <option value="mackenzie">Universidade Presbiteriana Mackenzie</option>
+                        <option value="anhembi">Universidade Anhembi Morumbi</option>
+                        <option value="fgv">Fundação Getúlio Vargas (FGV)</option>
+                        <option value="unespmarilia">UNESP - Marília</option>
+                        <option value="unimar">Universidade de Marília (UNIMAR)</option>
+                    </select><br><br>
+                    
+                    <label for="turno">Turno:</label>
+                    <select id="turno" name="turno" required>
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noite">Noite</option>
+                    </select><br><br>
+                    
+                    <label for="curso">Curso:</label>
+                    <select id="curso" name="curso" required>
+                        <option value="engenharia">Engenharia</option>
+                        <option value="direito">Direito</option>
+                        <option value="medicina">Medicina</option>
+                        <option value="administração">Administração</option>
+                        <option value="comunicacao">Comunicação Social</option>
+                        <option value="psicologia">Psicologia</option>
+                        <option value="design">Design Gráfico</option>
+                        <option value="engenharia">Engenharia</option>
+                        <option value="ciencias_computacao">Ciências da Computação</option>
+                        <option value="analise_desenvolvimento_sistemas">Análise e Desenvolvimento de Sistemas</option>
+                        <option value="arquitetura">Arquitetura</option>
+                        <option value="agronomia">Agronomia</option>
+                        <option value="Outro">Outro</option>
+                    </select><br><br>
+                    
+                    <input type="submit" class="submit-button" value="Cadastrar">
+            </form>
+        </div>
+
+        <button id="openPopup2">Entrar</button>
+        <div id="popup2" class="popup">
+            <form action="processar_login.php" method="POST">
+                <label for="ra">R.A. (Registro Acadêmico):</label>
+                <input type="text" id="ra" name="ra" required><br><br>
+                
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required><br><br>
+    
+                <label for="lembrarSenha">
+                    <input type="checkbox" id="lembrarSenha" name="lembrarSenha"> Lembrar senha
+                </label>
+    
+                <input type="submit" class="submit-button" value="Entrar">
+            </form>
+            <button id="closePopup2"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-links">
+            <ul>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#">Central de Ajuda</a></li>
+                <li><a href="termos.html">Termos de Serviço</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+        </div>
+    </div>
+  <script>
+    document.getElementById('openPopup').addEventListener('click', function() {
+        document.getElementById('popup').style.display = 'block';
+    });
+
+    document.getElementById('closePopup').addEventListener('click', function() {
+        document.getElementById('popup').style.display = 'none';
+    });
+</script>
+<script>
+    document.getElementById('openPopup2').addEventListener('click', function() {
+        document.getElementById('popup2').style.display = 'block';
+    });
+
+    document.getElementById('closePopup2').addEventListener('click', function() {
+        document.getElementById('popup2').style.display = 'none';
+    });
+</script>
+</body>
+</html>
+
