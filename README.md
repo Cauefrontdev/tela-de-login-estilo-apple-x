@@ -3,7 +3,7 @@ O projeto adota uma abordagem de design minimalista e elegante, incorporando ele
 
 # Tela de Login Moderna
 
-![Tela de Login](login-screenshot.png)
+![Tela de Login](login.png)
 
 Este repositório contém uma implementação de uma tela de login moderna, inspirada nos estilos de login da Apple e Twitter. A tela de login é projetada para ser elegante, funcional e pronta para se conectar ao back-end de sua aplicação.
 
